@@ -7,7 +7,10 @@ flake8-quotes
 isort
 pep8-naming
 pillow
-robotframework
-robotframework-selenium2library
-pytest
+pytest==3.10.1
 pytest-runner
+robotframework
+robotframework-seleniumlibrary
+sphinx
+sphinxcontrib-robotframework
+setuptools-scm
