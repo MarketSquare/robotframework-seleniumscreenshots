@@ -1,4 +1,6 @@
 graft src/SeleniumScreenshots
 recursive-include src/SeleniumScreenshots *.js
 include *.rst *.txt *.nix setup.py setup.cfg
+exclude Makefile
 global-exclude *.py[co]
+prune docs
