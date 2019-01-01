@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.9.2 (unreleased)
+0.9.2 (2019-01-01)
 ------------------
 
 - Update README and documentation
