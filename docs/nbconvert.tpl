@@ -3,8 +3,10 @@
 {% block any_cell %}
 {% if cell['cell_type'] != 'code' %}
   {{ super() }}
-{% elif cell['outputs']|length > 1 %}
+{% elif cell['outputs']|length > 0 %}
   {# drop log and report links output: #}
   {{ cell['outputs'].pop(0) and super() }}
+{% else %}
+  {{ super() }}
 {% endif %}
 {% endblock any_cell %}
