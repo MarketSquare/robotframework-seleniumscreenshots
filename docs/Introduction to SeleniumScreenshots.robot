@@ -8,11 +8,6 @@ Library  SeleniumScreenshots
 
 ${BROWSER}  firefox
 
-*** Test Cases ***
-
-Open browser
-    Open browser  about:blank  browser=${BROWSER}
-
 *** Keywords ***
 
 Open robotframework.org
@@ -21,12 +16,27 @@ Open robotframework.org
 
 *** Test Cases ***
 
-Highlighting an area
+Open browser
+    Open browser  about:blank  browser=${BROWSER}
+
+*** Test Cases ***
+
+Capture and crop page screenshot
     Open robotframework.org
-    Highlight  link:INTRODUCTION
     Capture and crop page screenshot
     ...  screenshot.png
-    ...  link:INTRODUCTION
+    ...  css:H1.main-header
+    ...  css:NAV[id='navigation'] > DIV > IMG
+
+*** Test Cases ***
+
+Highlighting an area
+    Open robotframework.org
+    Highlight
+    ...  link:INTRODUCTION  # locator (id, css, name or link)
+    Capture and crop page screenshot
+    ...  screenshot.png     # filename
+    ...  link:INTRODUCTION  # locator
 
 *** Test Cases ***
 
@@ -41,14 +51,16 @@ Clear highlighting
 Update style
     Open robotframework.org
     Update element style
-    ...  link:INTRODUCTION
-    ...  outline  dotted yellow 3px
+    ...  link:INTRODUCTION  # locator (id, css, name or link)
+    ...  outline            # style
+    ...  dotted yellow 3px  # value
     Capture and crop page screenshot
     ...  screenshot-1.png
     ...  link:INTRODUCTION
     Update element style
     ...  link:INTRODUCTION
-    ...  outline  none
+    ...  outline
+    ...  none
     Capture and crop page screenshot
     ...  screenshot-2.png
     ...  link:INTRODUCTION
@@ -62,21 +74,6 @@ Add dot
     ...  left=8
     Capture and crop page screenshot
     ...  screenshot.png
-    ...  link:INTRODUCTION
-
-*** Test Cases ***
-
-Add and remove dot
-    Open robotframework.org
-    ${dot}=  Add dot
-    ...  link:INTRODUCTION
-    ...  left=8  background=red
-    Capture and crop page screenshot
-    ...  screenshot-1.png
-    ...  link:INTRODUCTION
-    Remove element  ${dot}
-    Capture and crop page screenshot
-    ...  screenshot-2.png
     ...  link:INTRODUCTION
 
 *** Test Cases ***
@@ -98,15 +95,31 @@ Add numbered dots dots
 
 *** Test Cases ***
 
+Add and remove dot
+    Open robotframework.org
+    ${dot}=  Add dot
+    ...  link:INTRODUCTION
+    ...  left=8  background=red
+    Capture and crop page screenshot
+    ...  screenshot-1.png
+    ...  link:INTRODUCTION
+    Remove element  ${dot}
+    Capture and crop page screenshot
+    ...  screenshot-2.png
+    ...  link:INTRODUCTION
+
+*** Test Cases ***
+
 Add note
     Open robotframework.org
     ${note} =  Add note 
-    ...  link:INTRODUCTION
-    ...  text=Start here:
-    ...  position=top
+    ...  css:NAV[id='navigation'] > DIV > IMG
+    ...  text=I am a robot. With opinions.
+    ...  width=160
+    ...  position=right
     Capture and crop page screenshot
     ...  screenshot.png
-    ...  link:INTRODUCTION
+    ...  css:NAV[id='navigation'] > DIV > IMG
     ...  ${note}
 
 *** Test Cases ***
@@ -115,7 +128,7 @@ Add pointy note
     Open robotframework.org
     ${note} =  Add pointy note
     ...  link:INTRODUCTION
-    ...  text=Start here
+    ...  text=Start here.
     ...  position=right
     Capture and crop page screenshot
     ...  screenshot.png
