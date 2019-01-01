@@ -8,6 +8,11 @@ requirements-python3.nix: requirements-python3.txt
 	--run 'nix-shell setup.nix --argstr python python3 -A pip2nix \
 	--run "pip2nix generate -r requirements-python3.txt --output=requirements-python3.nix"'
 
+requirements-python3-travis.nix: requirements-python3-travis.txt
+	@nix-shell -p libffi \
+	--run 'nix-shell setup.nix --argstr python python3 -A pip2nix \
+	--run "pip2nix generate -r requirements-python3-travis.txt --output=requirements-python3-travis.nix"'
+
 .PHONY: freeze
 freeze-python3:
 	@grep "name" requirements-python3.nix |grep -Eo "\"(.*)\""|grep -Eo "[^\"]+"|sed -r "s|-([0-9\.]+)|==\1|g"
@@ -15,6 +20,10 @@ freeze-python3:
 .PHONY: freeze
 freeze-python2:
 	@grep "name" requirements-python2.nix |grep -Eo "\"(.*)\""|grep -Eo "[^\"]+"|sed -r "s|-([0-9\.]+)|==\1|g"
+
+.PHONY: freeze
+freeze-python3-travis:
+	@grep "name" requirements-python3-travis.nix |grep -Eo "\"(.*)\""|grep -Eo "[^\"]+"|sed -r "s|-([0-9\.]+)|==\1|g"
 
 .PHONY: upgrade
 upgrade:
