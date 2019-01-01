@@ -1,4 +1,4 @@
-global-exclude *.pyc *.sh
-graft docs *
-graft src *
-include *.nix *.txt *.rst setup.py setup.cfg
+graft src/SeleniumScreenshots
+recursive-include src/SeleniumScreenshots *.js
+include *.rst *.txt *.nix setup.py setup.cfg
+global-exclude *.py[co]
