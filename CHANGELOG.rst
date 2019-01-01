@@ -4,8 +4,8 @@ Changelog
 0.9.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Update README and documentation
+  [datakurre]
 
 0.9.1 (2019-01-01)
 ------------------
