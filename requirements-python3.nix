@@ -4,17 +4,6 @@
 { pkgs, fetchurl, fetchgit, fetchhg }:
 
 self: super: {
-  "Jinja2" = super.buildPythonPackage {
-    name = "Jinja2-2.10";
-    doCheck = false;
-    propagatedBuildInputs = [
-      self."MarkupSafe"
-    ];
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/56/e6/332789f295cf22308386cf5bbd1f4e00ed11484299c5d7383378cf48ba47/Jinja2-2.10.tar.gz";
-      sha256 = "190l36hfw3wb2n3n68yacjabxyb1pnxwn7vjx96cmjj002xy2jzq";
-    };
-  };
   "MarkupSafe" = super.buildPythonPackage {
     name = "MarkupSafe-1.1.0";
     doCheck = false;
@@ -23,28 +12,12 @@ self: super: {
       sha256 = "1lxirjypbdd3l9jl4vliilhfnhy7c7f2vlldqg1b0i74khn375sf";
     };
   };
-  "Pygments" = super.buildPythonPackage {
-    name = "Pygments-2.3.1";
-    doCheck = false;
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/64/69/413708eaf3a64a6abb8972644e0f20891a55e621c6759e2c3f3891e05d63/Pygments-2.3.1.tar.gz";
-      sha256 = "0ji87g09jph8jqcvclgb02qvxasdnr9pzvk90rl66d90yqcxmyjz";
-    };
-  };
   "Send2Trash" = super.buildPythonPackage {
     name = "Send2Trash-1.5.0";
     doCheck = false;
     src = fetchurl {
       url = "https://files.pythonhosted.org/packages/13/2e/ea40de0304bb1dc4eb309de90aeec39871b9b7c4bd30f1a3cdcb3496f5c0/Send2Trash-1.5.0.tar.gz";
       sha256 = "1ci8vcwjmjlp11ljj1ckrfmml9fkq1mclx2gr53y4zvhgp01q030";
-    };
-  };
-  "alabaster" = super.buildPythonPackage {
-    name = "alabaster-0.7.12";
-    doCheck = false;
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/cc/b4/ed8dcb0d67d5cfb7f83c4d5463a7614cb1d078ad7ae890c9143edebbf072/alabaster-0.7.12.tar.gz";
-      sha256 = "00nwwjj2d2ym4s2kk217x7jkx1hnczc3fvm8yxbqmsp6b0nxfqd6";
     };
   };
   "atomicwrites" = super.buildPythonPackage {
@@ -61,17 +34,6 @@ self: super: {
     src = fetchurl {
       url = "https://files.pythonhosted.org/packages/0f/9e/26b1d194aab960063b266170e53c39f73ea0d0d3f5ce23313e0ec8ee9bdf/attrs-18.2.0.tar.gz";
       sha256 = "0s9ydh058wmmf5v391pym877x4ahxg45dw6a0w4c7s5wgpigdjqh";
-    };
-  };
-  "babel" = super.buildPythonPackage {
-    name = "babel-2.6.0";
-    doCheck = false;
-    propagatedBuildInputs = [
-      self."pytz"
-    ];
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/be/cc/9c981b249a455fa0c76338966325fc70b7265521bad641bf2932f77712f4/Babel-2.6.0.tar.gz";
-      sha256 = "08rxmbx2s4irp0w0gmn498vns5xy0fagm0fg33xa772jiks51flc";
     };
   };
   "backcall" = super.buildPythonPackage {
@@ -92,22 +54,6 @@ self: super: {
     src = fetchurl {
       url = "https://files.pythonhosted.org/packages/ae/31/680afc7d44040004296a2d8f0584983c2f2386448cd9d0964197e6c1160e/bleach-3.0.2.tar.gz";
       sha256 = "06474zg7f73hv8h1xw2wcsmvn2ygj73zxgxxqg8zcx8ap1srdls8";
-    };
-  };
-  "certifi" = super.buildPythonPackage {
-    name = "certifi-2018.11.29";
-    doCheck = false;
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/55/54/3ce77783acba5979ce16674fc98b1920d00b01d337cfaaf5db22543505ed/certifi-2018.11.29.tar.gz";
-      sha256 = "1dvccavd2fzq4j37w0sznylp92ps14zi6gvlxzm23in0yhzciya7";
-    };
-  };
-  "chardet" = super.buildPythonPackage {
-    name = "chardet-3.0.4";
-    doCheck = false;
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/fc/bb/a5768c230f9ddb03acc9ef3f0d4a3cf93462473795d18e9535498c8f929d/chardet-3.0.4.tar.gz";
-      sha256 = "1bpalpia6r5x1kknbk11p1fzph56fmmnp405ds8icksd3knr5aw4";
     };
   };
   "decorator" = super.buildPythonPackage {
@@ -233,22 +179,6 @@ self: super: {
       sha256 = "1f2rlqn9rh7adgir52dlbqz69gsab44x0mlm8gf1cs7xvhv54137";
     };
   };
-  "idna" = super.buildPythonPackage {
-    name = "idna-2.8";
-    doCheck = false;
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz";
-      sha256 = "01rlkigdxg17sf9yar1jl8n18ls59367wqh59hnawlyg53vb6my3";
-    };
-  };
-  "imagesize" = super.buildPythonPackage {
-    name = "imagesize-1.1.0";
-    doCheck = false;
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/41/f5/3cf63735d54aa9974e544aa25858d8f9670ac5b4da51020bbfc6aaade741/imagesize-1.1.0.tar.gz";
-      sha256 = "1dg3wn7qpwmhgqc0r9na2ding1wif9q5spz3j9zn2riwphc2k0zk";
-    };
-  };
   "ipykernel" = super.buildPythonPackage {
     name = "ipykernel-5.1.0";
     doCheck = false;
@@ -267,13 +197,13 @@ self: super: {
     name = "ipython-7.2.0";
     doCheck = false;
     propagatedBuildInputs = [
-      self."Pygments"
       self."backcall"
       self."decorator"
       self."jedi"
       self."pexpect"
       self."pickleshare"
       self."prompt-toolkit"
+      self."pygments"
       self."setuptools"
       self."traitlets"
     ];
@@ -324,6 +254,17 @@ self: super: {
       sha256 = "1za944msp0f8x36qa8l309jhv0kzlsdh7r9nj3z12y8npnsh45sp";
     };
   };
+  "jinja2" = super.buildPythonPackage {
+    name = "jinja2-2.10";
+    doCheck = false;
+    propagatedBuildInputs = [
+      self."MarkupSafe"
+    ];
+    src = fetchurl {
+      url = "https://files.pythonhosted.org/packages/56/e6/332789f295cf22308386cf5bbd1f4e00ed11484299c5d7383378cf48ba47/Jinja2-2.10.tar.gz";
+      sha256 = "190l36hfw3wb2n3n68yacjabxyb1pnxwn7vjx96cmjj002xy2jzq";
+    };
+  };
   "jsonschema" = super.buildPythonPackage {
     name = "jsonschema-3.0.0a3";
     doCheck = false;
@@ -372,11 +313,11 @@ self: super: {
     name = "jupyter-console-6.0.0";
     doCheck = false;
     propagatedBuildInputs = [
-      self."Pygments"
       self."ipykernel"
       self."ipython"
       self."jupyter-client"
       self."prompt-toolkit"
+      self."pygments"
     ];
     src = fetchurl {
       url = "https://files.pythonhosted.org/packages/92/c8/b7e768a3dec19b09d8ad5296a479e03c19a741a1bb4abab27c09236b8562/jupyter_console-6.0.0.tar.gz";
@@ -461,15 +402,15 @@ self: super: {
     name = "nbconvert-5.4.0";
     doCheck = false;
     propagatedBuildInputs = [
-      self."Jinja2"
-      self."Pygments"
       self."bleach"
       self."defusedxml"
       self."entrypoints"
+      self."jinja2"
       self."jupyter-core"
       self."mistune"
       self."nbformat"
       self."pandocfilters"
+      self."pygments"
       self."testpath"
       self."traitlets"
     ];
@@ -496,10 +437,10 @@ self: super: {
     name = "notebook-5.7.4";
     doCheck = false;
     propagatedBuildInputs = [
-      self."Jinja2"
       self."Send2Trash"
       self."ipykernel"
       self."ipython-genutils"
+      self."jinja2"
       self."jupyter-client"
       self."jupyter-core"
       self."nbconvert"
@@ -513,18 +454,6 @@ self: super: {
     src = fetchurl {
       url = "https://files.pythonhosted.org/packages/6e/22/b5dcce67559d63d0f22e46d806305710808c698a1b91c07eb09e389785e0/notebook-5.7.4.tar.gz";
       sha256 = "0jm7324mbxljmn9hgapj66q7swyz5ai92blmr0jpcy0h80x6f26r";
-    };
-  };
-  "packaging" = super.buildPythonPackage {
-    name = "packaging-18.0";
-    doCheck = false;
-    propagatedBuildInputs = [
-      self."pyparsing"
-      self."six"
-    ];
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/cf/50/1f10d2626df0aa97ce6b62cf6ebe14f605f4e101234f7748b8da4138a8ed/packaging-18.0.tar.gz";
-      sha256 = "01wq9c53ix5rz6qg2c98gy8n4ff768rmanifm8m5jpjiaizj51h8";
     };
   };
   "pandocfilters" = super.buildPythonPackage {
@@ -541,17 +470,6 @@ self: super: {
     src = fetchurl {
       url = "https://files.pythonhosted.org/packages/46/31/60de7c9cbb97cac56b193a5b61a1fd4d21df84843a570b370ec34781316b/parso-0.3.1.tar.gz";
       sha256 = "18p89iwcm8mnf380f92g9w0bhx5km8wxp392vvjcq4y1ld1llw1m";
-    };
-  };
-  "pep8-naming" = super.buildPythonPackage {
-    name = "pep8-naming-0.7.0";
-    doCheck = false;
-    propagatedBuildInputs = [
-      self."flake8-polyfill"
-    ];
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/3e/4a/125425d6b1e017f48dfc9c961f4bb9510168db7a090618906c750184ed03/pep8-naming-0.7.0.tar.gz";
-      sha256 = "09j8qg9wvrgp05drq81kfbd18wzz4p4nrhzkvalk5vq6vph5hhk2";
     };
   };
   "pexpect" = super.buildPythonPackage {
@@ -641,12 +559,12 @@ self: super: {
       sha256 = "0jba28czyvimdc72llms3f17swp3i8jdcabf5w0j00adfbn64xls";
     };
   };
-  "pyparsing" = super.buildPythonPackage {
-    name = "pyparsing-2.3.0";
+  "pygments" = super.buildPythonPackage {
+    name = "pygments-2.3.1";
     doCheck = false;
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/d0/09/3e6a5eeb6e04467b737d55f8bba15247ac0876f98fae659e58cd744430c6/pyparsing-2.3.0.tar.gz";
-      sha256 = "14k5v7n3xqw8kzf42x06bzp184spnlkya2dpjyflax6l3yrallzk";
+      url = "https://files.pythonhosted.org/packages/64/69/413708eaf3a64a6abb8972644e0f20891a55e621c6759e2c3f3891e05d63/Pygments-2.3.1.tar.gz";
+      sha256 = "0ji87g09jph8jqcvclgb02qvxasdnr9pzvk90rl66d90yqcxmyjz";
     };
   };
   "pyrsistent" = super.buildPythonPackage {
@@ -661,7 +579,7 @@ self: super: {
     };
   };
   "pytest" = super.buildPythonPackage {
-    name = "pytest-3.10.1";
+    name = "pytest-4.0.2";
     doCheck = false;
     propagatedBuildInputs = [
       self."atomicwrites"
@@ -673,8 +591,8 @@ self: super: {
       self."six"
     ];
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/b5/96/37011e484665fab8b51add4f707d2aa28f1a06c68dd1c8a50e03551693b3/pytest-3.10.1.tar.gz";
-      sha256 = "0q4n1p47p2bdblima035ga6yf5hkgd5jc1zw2yb9n5h17hbwyip2";
+      url = "https://files.pythonhosted.org/packages/9d/a9/3688b67467527c25e7a4d02c3b22565f15158a0a5d681870bfda8af210c6/pytest-4.0.2.tar.gz";
+      sha256 = "1sgq8nm7yb9ygapdjgn52zr0ny47gps5dpa86d08aiccq4pvz2gn";
     };
   };
   "pytest-runner" = super.buildPythonPackage {
@@ -696,14 +614,6 @@ self: super: {
       sha256 = "00ngwcdw36w5b37b51mdwn3qxid9zdf3kpffv2q6n9kl05y2iyc8";
     };
   };
-  "pytz" = super.buildPythonPackage {
-    name = "pytz-2018.7";
-    doCheck = false;
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/cd/71/ae99fc3df1b1c5267d37ef2c51b7d79c44ba8a5e37b48e3ca93b4d74d98b/pytz-2018.7.tar.gz";
-      sha256 = "1jin48jylhan9izpb7in6h43nlhvm7y7iwn56b6k7lypkg43bjri";
-    };
-  };
   "pyzmq" = super.buildPythonPackage {
     name = "pyzmq-17.1.2";
     doCheck = false;
@@ -716,30 +626,16 @@ self: super: {
     name = "qtconsole-4.4.3";
     doCheck = false;
     propagatedBuildInputs = [
-      self."Pygments"
       self."ipykernel"
       self."ipython-genutils"
       self."jupyter-client"
       self."jupyter-core"
+      self."pygments"
       self."traitlets"
     ];
     src = fetchurl {
       url = "https://files.pythonhosted.org/packages/77/ab/43b1f5e27d712d9b7bb599afff32686465c32765e14f05a5c92b991b706d/qtconsole-4.4.3.tar.gz";
       sha256 = "1b03n1ixzscm0jw97l4dq5iy4fslnqxq5bb8287xb7n2a1gs26xw";
-    };
-  };
-  "requests" = super.buildPythonPackage {
-    name = "requests-2.21.0";
-    doCheck = false;
-    propagatedBuildInputs = [
-      self."certifi"
-      self."chardet"
-      self."idna"
-      self."urllib3"
-    ];
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/52/2c/514e4ac25da2b08ca5a464c50463682126385c4272c18193876e91f4bc38/requests-2.21.0.tar.gz";
-      sha256 = "13jr0wkj9c2j8c0c8iaal9iivi0bpxghnsdn6lxcpnmc657q4ajh";
     };
   };
   "robotframework" = super.buildPythonPackage {
@@ -766,12 +662,12 @@ self: super: {
     name = "robotkernel-0.8.0";
     doCheck = false;
     propagatedBuildInputs = [
-      self."Pygments"
       self."docutils"
       self."ipykernel"
       self."lunr"
       self."nbformat"
       self."pillow"
+      self."pygments"
       self."robotframework"
     ];
     src = fetchurl {
@@ -812,58 +708,6 @@ self: super: {
     src = fetchurl {
       url = "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz";
       sha256 = "0wxs1q74v07ssjywbbm7x6h5v9qx209ld2yfsif4060sxi0h2sni";
-    };
-  };
-  "snowballstemmer" = super.buildPythonPackage {
-    name = "snowballstemmer-1.2.1";
-    doCheck = false;
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/20/6b/d2a7cb176d4d664d94a6debf52cd8dbae1f7203c8e42426daa077051d59c/snowballstemmer-1.2.1.tar.gz";
-      sha256 = "0a0idq4y5frv7qsg2x62jd7rd272749xk4x99misf5rcifk2d7wi";
-    };
-  };
-  "sphinx" = super.buildPythonPackage {
-    name = "sphinx-1.8.3";
-    doCheck = false;
-    propagatedBuildInputs = [
-      self."Jinja2"
-      self."Pygments"
-      self."alabaster"
-      self."babel"
-      self."docutils"
-      self."imagesize"
-      self."packaging"
-      self."requests"
-      self."setuptools"
-      self."six"
-      self."snowballstemmer"
-      self."sphinxcontrib-websupport"
-    ];
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/4d/ed/4595274b5c9ce53a768cc0804ef65fd6282c956b93919a969e98d53894e4/Sphinx-1.8.3.tar.gz";
-      sha256 = "1y5ry56rsmncd0n8aph6sg51bqn1mrmnnr0968ysxzxc8jx1gjy4";
-    };
-  };
-  "sphinxcontrib-robotframework" = super.buildPythonPackage {
-    name = "sphinxcontrib-robotframework-0.8.0";
-    doCheck = false;
-    propagatedBuildInputs = [
-      self."Pygments"
-      self."robotframework"
-      self."setuptools"
-      self."sphinx"
-    ];
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/c3/b1/4bf78bc6fbc0c34f4ddec87488b7c033452324deb11463a4970e5db69f10/sphinxcontrib-robotframework-0.8.0.tar.gz";
-      sha256 = "00n70h565v3rdqzcc46vbr85a5rjrx356pph5fnb24f1araj5ikh";
-    };
-  };
-  "sphinxcontrib-websupport" = super.buildPythonPackage {
-    name = "sphinxcontrib-websupport-1.1.0";
-    doCheck = false;
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/07/7a/e74b06dce85555ffee33e1d6b7381314169ebf7e31b62c18fcb2815626b7/sphinxcontrib-websupport-1.1.0.tar.gz";
-      sha256 = "1ff3ix76xi1y6m99qxhaq5161ix9swwzydilvdya07mgbcvpzr4x";
     };
   };
   "terminado" = super.buildPythonPackage {
