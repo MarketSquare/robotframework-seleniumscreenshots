@@ -21,7 +21,7 @@ let overrides = self: super: {
   "testfixtures" = super."testfixtures".overrideDerivation(old: {
     patches = [];
   });
-  "entrypoints" = super."entrypoints".overrideDerivation(old: {
+  "docutils" = super."docutils".overrideDerivation(old: {
     # patch name to tweak around bad archive at cachix
     name = "${old.name}-2019-01-01";
   });
