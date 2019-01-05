@@ -32,6 +32,8 @@ class Image(object):
         with open(os.path.join(output_dir, filename), 'wb') as output:
             area.save(output, 'png')
 
+        return os.path.join(output_dir, filename)
+
 
 class SeleniumScreenshots(Image):
     """SeleniumScreenshots library for Robot Framework provides keywords for
