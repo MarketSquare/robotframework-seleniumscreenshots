@@ -659,7 +659,7 @@ self: super: {
     };
   };
   "robotkernel" = super.buildPythonPackage {
-    name = "robotkernel-0.8.0";
+    name = "robotkernel-0.9.0";
     doCheck = false;
     propagatedBuildInputs = [
       self."docutils"
@@ -671,8 +671,8 @@ self: super: {
       self."robotframework"
     ];
     src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/22/4a/238af20441ec351281430b9c3ffad38527cd2e655035bb2828c5dd80f68c/robotkernel-0.8.0.tar.gz";
-      sha256 = "1pvgfxjw8k4x54s7yxw27rrmiy9m03pkzjmww91cack0pb9lrkjs";
+      url = "https://files.pythonhosted.org/packages/4d/14/4468f42869c575d23af4f2dec22c665e483e4c8047fca239213fe25b429b/robotkernel-0.9.0.tar.gz";
+      sha256 = "1y7yc1xiyccwr25qk6i94zy4406hrib6l1wn6i9r3ij3fkn01yfi";
     };
   };
   "selenium" = super.buildPythonPackage {
