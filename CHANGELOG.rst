@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.9.3 (unreleased)
+0.9.3 (2019-01-05)
 ------------------
 
 - Fix issue where support for name:-selector was broken
