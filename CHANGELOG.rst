@@ -4,8 +4,9 @@ Changelog
 0.9.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Fix issue where capture and crop page screenshot did not return filename of
+  the captured screenshot
+  [datakurre]
 
 0.9.2 (2019-01-01)
 ------------------
