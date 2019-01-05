@@ -4,6 +4,9 @@ Changelog
 0.9.3 (unreleased)
 ------------------
 
+- Fix issue where support for name:-selector was broken
+  [datakurre]
+
 - Fix issue where capture and crop page screenshot did not return filename of
   the captured screenshot
   [datakurre]
