@@ -87,7 +87,7 @@ class SeleniumScreenshots(Image):
         elif re.match(r'^css[=:]', locator):
             locator = locator[len('css='):]
         elif re.match(r'^name[=:]', locator):
-            locator = '[@name="' + locator[len('name='):] + '"]'
+            locator = '[name="' + locator[len('name='):] + '"]'
         elif re.match(r'^link[=:]', locator):
             locator = 'a:icontains("' + locator[len('name='):] + '"):eq(0)'
         elif re.match(r'^id[=:]', locator):
