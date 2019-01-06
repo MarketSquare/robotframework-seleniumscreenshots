@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.9.4 (unreleased)
+0.9.4 (2019-01-06)
 ------------------
 
 - Remove trailing slash from resources to fix build on Windows
