@@ -4,8 +4,8 @@ Changelog
 0.9.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Remove trailing slash from resources to fix build on Windows
+  [bollwyvl]
 
 0.9.3 (2019-01-05)
 ------------------
