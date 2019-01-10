@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.9.5 (unreleased)
+0.9.5 (2019-01-10)
 ------------------
 
 - Change license to BSD-3 and update package trove classifiers
