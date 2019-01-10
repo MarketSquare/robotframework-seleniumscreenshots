@@ -4,8 +4,8 @@ Changelog
 0.9.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Change license to BSD-3 and update package trove classifiers
+  [datakurre]
 
 0.9.4 (2019-01-06)
 ------------------
