@@ -10,4 +10,4 @@ SeleniumScreenshots is the maintained version of Selenium2Screenshots_.
 .. _Robot Framework: https://pypi.org/project/robotframework/
 .. _SeleniumLibrary: https://pypi.org/project/robotframework-seleniumlibrary/
 .. _Selenium2Screenshots: https://pypi.org/project/robotframework-selenium2screenshots/
-__ https://datakurre.github.io/robotframework-seleniumscreenshots/
+__ https://marketsquare.github.io/robotframework-seleniumscreenshots/
