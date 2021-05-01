@@ -49,7 +49,7 @@ ptyprocess==0.6.0
 py==1.7.0
 pycodestyle==2.4.0
 pyflakes==2.0.0
-pygments==2.3.1
+pygments==2.7.4
 pyrsistent==0.14.8
 pytest==4.0.2
 pytest-runner==4.2
