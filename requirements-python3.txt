@@ -60,7 +60,7 @@ robotframework==3.1
 robotframework-seleniumlibrary==3.3.0
 robotkernel==0.9.0
 selenium==3.141.0
-setuptools==40.6.3
+setuptools==65.5.1
 setuptools-scm==3.1.0
 six==1.12.0
 terminado==0.8.1
